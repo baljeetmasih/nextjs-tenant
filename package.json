@@ -1,32 +1,12 @@
 {
   "private": true,
   "scripts": {
-    "------------> app dev & prod <-------------------": "end",
-
-    "dev": "next dev",
+    "dev": "prisma generate && next dev",
     "build": "prisma generate && prisma db push && next build",
-    "start": "next start",
-    "------------> formating <-------------------": "end",
-    
     "format:write": "prettier --write \"**/*.{css,js,json,jsx,ts,tsx}\"",
     "format": "prettier \"**/*.{css,js,json,jsx,ts,tsx}\"",
-    "lint": "next lint",
-
-    "------------> prisma <-------------------": "end",
-    "prisma" : "npx prisma",
-    "prisma:init" : "npx prisma init",
-    "prisma:generate" : "npx prisma generate",
-    "prisma:studio" : "npx prisma studio",
-    "prisma:migrate" : "npx prisma migrate dev",
-    "prisma:pull" : "npx prisma db pull",
-    "prisma:push" : "npx prisma db push",
-    "prisma:validate" : "npx prisma validate",
-    "prisma:format" : "npx prisma format",
-    "prisma:version" : "npx prisma version",
-    "prisma:debug" : "npx prisma debug",
-    "------------> prisma end <-------------------": "end"
-
-
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
     "@next-auth/prisma-adapter": "^1.0.7",
